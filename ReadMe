@@ -17,7 +17,7 @@ then unzip it. This should populate /data/VeCanSetup with the package contents.
 
 You must also install SetupHelper from here:
 
-https://github.com/kwindrem/Victron-VeusOs-Setup-Helper
+https://github.com/kwindrem/SetupHelper-for-VenusOs
 
 Once both packages are installed run setup and follow the prompts.
 ./setup
