@@ -1,0 +1,31 @@
+The Generator Connector mechanism connects the generator digital input
+to the generator control's manual start
+When the digial input changes to the running state,
+Venus Manual Start is changed to true if there are no automatic run conditions
+hen the digital input changes to the not running,
+Venus Manual Start is changed to false
+
+The Generator Overview page is also modified to show 
+the generator running state inside the icon top left
+and a warning when the generator digital input and expected generator state disagree
+
+
+Setup:
+
+Copy the entire repo from GitHub as a zip file to /data on the Venus device
+then unzip it. This should populate /data/VeCanSetup with the package contents.
+
+You must also install SetupHelper from here:
+
+https://github.com/kwindrem/Victron-VeusOs-Setup-Helper
+
+Once both packages are installed run setup and follow the prompts.
+./setup
+A reboot may be required following installation of some components, most notably device overlays.
+
+You will need root access to the Venus device. Instructions can be found here:
+https://www.victronenergy.com/live/ccgx:root_access
+The root password needs to be reentered following a Venus update.
+Setting up an authorization key (see documentation referenced above) will save time and avoid having to reset the root password after each update.
+
+
