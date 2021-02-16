@@ -9,6 +9,8 @@ The Generator Overview page is also modified to show
 the generator running state inside the icon top left
 and a warning when the generator digital input and expected generator state disagree
 
+This script should be run manually initally.
+It will then called from reinstallMods to reinstall functionality after a Venus update
 
 Setup:
 
