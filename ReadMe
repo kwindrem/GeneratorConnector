@@ -40,7 +40,7 @@ mv current.tar.gz SetupHelper.tar.gz
 
 
 Once both packages are installed run setup and follow the prompts.
-./setup
+/data/GeneratorConnector/setup
 A reboot may be required following installation of some components, most notably device overlays.
 
 You will need root access to the Venus device. Instructions can be found here:
