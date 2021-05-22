@@ -1,0 +1,66 @@
+The Generator Connector mechanism connects the generator digital input
+to the generator control's manual start
+When the digial input changes to the running state,
+Venus Manual Start is changed to true if there are no automatic run conditions
+hen the digital input changes to the not running,
+Venus Manual Start is changed to false
+
+The Generator Overview page is also modified to show 
+the generator running state inside the icon top left
+and a warning when the generator digital input and expected generator state disagree
+
+This script should be run manually initally.
+It will then called from reinstallMods to reinstall functionality after a Venus update
+
+Setup:
+
+The easiest way to install this code IF the Venus device has internet access is to run the following command:
+
+wget -qO - https://github.com/kwindrem/GeneratorConnector/archive/current.tar.gz | tar -xzf - -C /data
+mv /data/GeneratorConnector-current /data/GeneratorConnector
+
+If not, do the following a computer that does have internet access
+
+click on this link in a web browser:
+https://github.com/kwindrem/GeneratorConnector/archive/current.tar.gz
+
+rename the resulting .tar.gz file to venus-data.tar.gz
+copy the venus-data.tar.gz to a USB stick,
+put the stick in the Venus device and reboot.
+When Venus boots, it will unarchive the file to /data/GeneratorConnector-current
+
+mv /data/GeneratorConnector-current /data/GeneratorConnector
+
+
+You must also install SetupHelper
+
+wget -qO - https://github.com/kwindrem/SetupHelper/archive/current.tar.gz | tar -xzf - -C /data
+mv /data/SetupHelper-current /data/SetupHelper
+
+or click on this link in a web browser:
+
+https://github.com/kwindrem/SetupHelper/archive/current.tar.gz
+mv current.tar.gz SetupHelper.tar.gz
+
+rename the resulting .tar.gz file to venus-data.tar.gz
+copy the venus-data.tar.gz to a USB stick,
+put the stick in the Venus device and reboot.
+
+mv /data/SetupHelper-current /data/SetupHelper
+
+Note, you must do GeneratorConnector and SetupHelper on a separate flash drive since they use
+the same file name on the flash drive.
+
+If you are installing multiple packages, SetupHelper need only be installed once.
+
+Once both packages are installed run setup and follow the prompts.
+/data/GeneratorConnector/setup
+
+A reboot may be required following installation of some components, most notably device overlays.
+
+You will need root access to the Venus device. Instructions can be found here:
+https://www.victronenergy.com/live/ccgx:root_access
+The root password needs to be reentered following a Venus update.
+Setting up an authorization key (see documentation referenced above) will save time and avoid having to reset the root password after each update.
+
+
