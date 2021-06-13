@@ -46,7 +46,7 @@ if [ $scriptAction == 'UNINSTALL' ] ; then
     logMessage "++ setup: Uninstalled GeneratorConnector"
 fi
 
-if $filesUpdated && ! $runningAtBoot ; then
+if $filesUpdated ; then
     logMessage "restarting dbus_generator"
     svc -t /service/dbus-generator-starter
     restartGui=true
